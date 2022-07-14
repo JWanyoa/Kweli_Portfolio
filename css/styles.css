@@ -1,26 +1,63 @@
-*
-{
-  margin: 0;
+* {
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
-body {
-  font-family: 'Montserrat', sans-serif; 
-  height: 90vh;
-}
-h2 {
-  /* text-align: center; */
-  color: white; 
-  font-size: 1.2em;
-}
-.container-main, .container-side{
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 90vh;
-  margin: 1em;
+/*Side Menu*/
+.menu {
   float: left;
+  width: 19%;
+  text-align: center;
+  margin: 0.5%;
 }
+
+.menu a {
+  text-decoration: none;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+
+/*Styling the cards*/
+div.card {
+  width: 250px;
+  height: 13em;
+  margin: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+/* Styling the Card on the menu Container */
+div.card .avatar .header{
+  background-color: #444;
+  margin: 0.6em;
+}
+
+div.menu a div.header {
+  background-color: #009999;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+/*Styling the profile card in the Main Container */
+div.menu a div.content {
+  padding: 15px;
+  line-height: 1.5em;
+  color: #444;
+}
+div.menu a div.content p{
+  font-size: 0.8em;
+}
+
+div.menu a div.card{
+  height: 18em;
+}
+
+/*Styling the menu list anchors*/
 .center {
   display: flex;
   /* Default direction = row  */
@@ -36,77 +73,127 @@ h2 {
   height: 3em; 
   width: 17em;
   background: #2e6371;
+  color: #fff;
 }
-
-.container-side{
-  flex-direction: row;
-  align-items: flex-start;
-  width: 69%;
-}
-
-.container-row{
-  text-align: center;
-  margin: 2em 0 0 0;
-}
-
-.container-main a{
-  text-decoration: none;
-  color: #ffffff;
-  text-align: center;
-}
-
+/*Styling the menu anchors for on hover effect*/
 a .center:hover{
   background-color: #6666FF;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 6px 0 rgba(0, 0, 255, 0.19);
   border-bottom: 2px solid black;
 }
-/*Styling the Cards*/
-div.card {
-  width: 250px;
-  height: 13em;
-  margin: 0.8em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+/*Styling the Navigation */
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  line-height: 40px;
+  text-align: left;
+    width: 130px;
+    border-bottom: none;
+    height: 50px;
+    display: inline-block;
+    margin-right: -4px;
+  }
+  .nav > ul > li {
+    text-align: center;
+  }
+
+  .nav > ul > li > a {
+    padding-left: 0;
+  }
+
+  /* Sub Menus */
+  .nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+
+  .nav li:hover ul {
+    display: block;
+  }
+
+  .nav li ul li {
+    display: block;
+  }
+  
+  /* Sub menu indicators */
+  .sub > a::after {
+    content: '\0025B8';
+    margin-left: 3px;
+  }
+  .sub > a:hover::after {
+    content: '\0025BE';
+  }
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 0.3em;
+  border-bottom: none;
+  transition: .3s background-color;
+}
+
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+.nav a.active {
+  background-color: #aaa;
+  color: #444;
+  cursor: default;
+}
+
+/* Sub Menus */
+.nav li li {
+  font-size: 0.8em;
+}
+
+/*Main Middle Container*/
+/*Main Menu*/
+.main{
+  float: left;
+  width: 80%;
+}
+
+.main a{
+  text-decoration: none;
+  color: #ffffff;
   text-align: center;
 }
 
-div.card .avatar .header{
+div.main .card div.header {
   background-color: #444;
-  margin: 0.6em;
-}
-
-div.container-main a div.header {
-  background-color: #009999;
   color: white;
   padding: 10px;
   font-size: 40px;
 }
 
-
 /*Styling the profile card in the Main Container */
-div.container-main a div.content {
+div.main .card div.content {
   padding: 15px;
   line-height: 1.5em;
   color: #444;
 }
-div.container-main a div.content p{
+div.main .card div.content p{
   font-size: 0.8em;
 }
 
-div.container-main a div.card{
-  height: 18em;
+div.main .card{
+  width: 14%;
+  float: left;
 }
 
-div.header {
-  background-color: #333366;
-  color: white;
-  padding: 10px;
-  font-size: 40px;
-}
-/*Styling the content of the cards in the container-side div*/
-div.content {
-  padding: 15px;
-  line-height: 1.5em;
-}
+
 
 /*Styling the button*/
 .btn{
@@ -126,25 +213,20 @@ div.content {
   box-sizing: border-box;
   font-size: 0.8em;
 }
-a{
-  text-decoration: none;
-}
 
-/*Styling the divs with the Container class */
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-/*Styling the rows in the containers */
-.row {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
-}
 
-/*Styling the navigation */
-.nav ul {
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .nav li,.menu a .card, .menu a .center {
+    width: 96%;
+    margin: 1% 2% 1% 2%;
+  }
+  div.main .card{
+    width: 46%;
+    margin: 2%;
+  }
+  .nav ul {
   list-style: none;
   background-color: #444;
   text-align: center;
@@ -183,78 +265,9 @@ a{
   font-size: 0.8em;
 }
 
-/*******************************************
-   Style menu for larger screens
-********************************************/
-
-@media screen and (min-width: 650px) {
-  .nav li {
-    width: 130px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
-    display: inline-block;
-    margin-right: -4px;
-  }
-/*Styling the container for big screens */
-  .container{
-    width: 970px;
-  }
-
-  .col-md-6{
-    grid-column: span 6;
-  }
-
-  .nav a {
-    border-bottom: none;
-  }
-
-  .nav > ul > li {
-    text-align: center;
-  }
-
-  .nav > ul > li > a {
-    padding-left: 0;
-  }
-
-  /* Sub Menus */
-  .nav li ul {
-    position: absolute;
-    display: none;
-    width: inherit;
-  }
-
-  .nav li:hover ul {
-    display: block;
-  }
-
-  .nav li ul li {
-    display: block;
-  }
-  
-  /* Sub menu indicators */
-  .sub > a::after {
-    content: '\0025B8';
-    margin-left: 3px;
-  }
-  .sub > a:hover::after {
-    content: '\0025BE';
-  }
-}
-
-/*******************************************
-   Style menu for smaller screens
-********************************************/
-
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .nav li, .container-main, .container-side, .container, .box, div.card {
-    width: 100%;
-  }
-
-  .container-main, .container-side{
+.menu, .container-side{
     justify-content: space-around;
     align-items: stretch;
   }
+
 }

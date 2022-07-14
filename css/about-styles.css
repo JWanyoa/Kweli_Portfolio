@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
 }
-
+/*Side Menu*/
 .menu {
   float: left;
   width: 19%;
@@ -20,20 +20,6 @@
   color: black;
 }
 
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-}
-
-.right {
-  background-color: #e5e5e5;
-  float: left;
-  width: 20%;
-  padding: 15px;
-  margin-top: 7px;
-  text-align: center;
-}
 
 /*Styling the cards*/
 div.card {
@@ -172,15 +158,73 @@ a .center:hover{
   font-size: 0.8em;
 }
 
+/*Main Middle Container*/
+/*Main Menu*/
+.main{
+  float: left;
+  width: 80%;
+}
+
+.main a{
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+}
+
+div.main .card div.header {
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+/*Styling the profile card in the Main Container */
+div.main .card div.content {
+  padding: 15px;
+  line-height: 1.5em;
+  color: #444;
+}
+div.main .card div.content p{
+  font-size: 0.8em;
+}
+
+div.main .card{
+  width: 14%;
+  float: left;
+}
+
+
+
+/*Styling the button*/
+.btn{
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.7em 1em;
+  margin: 0.4em 0;
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer; width: 100%;
+  padding: 0.2em 0.4em;
+  margin: 0.5em 0 0.5em 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  font-size: 0.8em;
+}
+
+
 
 @media only screen and (max-width: 620px) {
   /* For mobile phones: */
-  .menu, .main, .right, .nav li {
-    width: 100%;
-  }
-  .menu a .card, .menu a .center{
+  .menu, .main, .nav li,.menu a .card, .menu a .center {
     width: 96%;
-    margin: 0 2% 0 2%;
+    margin: 1% 2% 1% 2%;
+  }
+  div.main .card{
+    width: 46%;
+    margin: 2%;
   }
   .nav ul {
   list-style: none;
