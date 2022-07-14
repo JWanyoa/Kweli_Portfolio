@@ -3,13 +3,14 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 </head>
 <body style="font-family:Verdana;color:#aaaaaa;">
   <header>
       <div class="nav">
         <ul>
           <li class="home"><a href="index.html">Home</a></li>
-          <li class="about"><a href="">About Me</a></li>
+          <li class="about"><a href="aboutme.html">About Me</a></li>
           <li class="tutorials sub"><a href="#">Projects</a>
             <ul>
               <li><a href="#">Project #1</a></li>
@@ -24,7 +25,7 @@
               <li><a href="#">Blog #3</a></li>
             </ul>
           </li>
-          <li class="contact"><a href="contact.html">Contact Me</a></li>
+          <li class="contact"><a href="#">Contact Me</a></li>
         </ul>
       </div>
     </header>
@@ -74,13 +75,22 @@
   <h4>My Details</h4>
 </div>
   <div class="main">
-    <!-- Add your stuff here--->
     <section id="contact">
-    <div class="sectionheader"> <h1>ABOUT ME</h1></div>
-    <article>
-
-    </article>
-  </section>
+		<div class="sectionheader">	<h1>CONTACT ME</h1></div>
+		<article>
+		<p>You can Holla Me Using this platform</p>
+			
+				<label for="checkcontact" class="contactbutton"><div class="mail"></div></label><input id="checkcontact" type="checkbox">
+		
+				<form action="" method="post" class="contactform">
+					<p class="input_wrapper"><input type="text" name="contact_name" value=""  id ="contact_name"><label for="contact_name">NAME</label></p>
+					<p class="input_wrapper"><input type="text" name="contact_email" value=""  id ="contact_email"><label for="contact_email">EMAIL</label></p>
+					<p class="input_wrapper"><input type="text" name="contact_subject" value=""  id ="contact_subject"><label for="contact_subject">SUBJECT</label></p>
+					<p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"></textarea></p>
+					<p class="submit_wrapper"><input type="submit" value="SEND MESSAGE"></p>			
+				</form>
+		</article>
+	</section>
   </div>
 
 </div>
