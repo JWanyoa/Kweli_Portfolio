@@ -12,12 +12,12 @@ h2 {
   color: white; 
   font-size: 1.2em;
 }
-.container, .container-side{
+.container-main, .container-side{
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
+  height: 90vh;
   margin: 1em;
   float: left;
 }
@@ -49,10 +49,9 @@ h2 {
   margin: 2em 0 0 0;
 }
 
-.container a{
+.container-main a{
   text-decoration: none;
   color: #ffffff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
 
@@ -61,7 +60,7 @@ a .center:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 6px 0 rgba(0, 0, 255, 0.19);
   border-bottom: 2px solid black;
 }
-
+/*Styling the Cards*/
 div.card {
   width: 250px;
   height: 13em;
@@ -70,15 +69,42 @@ div.card {
   text-align: center;
 }
 
+div.card .avatar .header{
+  background-color: #444;
+  margin: 0.6em;
+}
+
+div.container-main a div.header {
+  background-color: #009999;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+
+/*Styling the profile card in the Main Container */
+div.container-main a div.content {
+  padding: 15px;
+  line-height: 1.5em;
+  color: #444;
+}
+div.container-main a div.content p{
+  font-size: 0.8em;
+}
+
+div.container-main a div.card{
+  height: 18em;
+}
+
 div.header {
   background-color: #333366;
   color: white;
   padding: 10px;
   font-size: 40px;
 }
-
+/*Styling the content of the cards in the container-side div*/
 div.content {
-  padding: 10px;
+  padding: 15px;
   line-height: 1.5em;
 }
 
@@ -104,8 +130,20 @@ a{
   text-decoration: none;
 }
 
+/*Styling the divs with the Container class */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+/*Styling the rows in the containers */
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
 
-
+/*Styling the navigation */
 .nav ul {
   list-style: none;
   background-color: #444;
@@ -159,6 +197,14 @@ a{
     display: inline-block;
     margin-right: -4px;
   }
+/*Styling the container for big screens */
+  .container{
+    width: 970px;
+  }
+
+  .col-md-6{
+    grid-column: span 6;
+  }
 
   .nav a {
     border-bottom: none;
@@ -194,5 +240,21 @@ a{
   }
   .sub > a:hover::after {
     content: '\0025BE';
+  }
+}
+
+/*******************************************
+   Style menu for smaller screens
+********************************************/
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .nav li, .container-main, .container-side, .container, .box, div.card {
+    width: 100%;
+  }
+
+  .container-main, .container-side{
+    justify-content: space-around;
+    align-items: stretch;
   }
 }

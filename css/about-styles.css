@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  float: left;
+  width: 19%;
+  text-align: center;
+  margin: 0.5%;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.right {
+  background-color: #e5e5e5;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+/*Styling the cards*/
+div.card {
+  width: 250px;
+  height: 13em;
+  margin: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+/* Styling the Card on the menu Container */
+div.card .avatar .header{
+  background-color: #444;
+  margin: 0.6em;
+}
+
+div.menu a div.header {
+  background-color: #009999;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+/*Styling the profile card in the Main Container */
+div.menu a div.content {
+  padding: 15px;
+  line-height: 1.5em;
+  color: #444;
+}
+div.menu a div.content p{
+  font-size: 0.8em;
+}
+
+div.menu a div.card{
+  height: 18em;
+}
+
+/*Styling the menu list anchors*/
+.center {
+  display: flex;
+  /* Default direction = row  */
+  flex-direction: row;   
+  
+  /* Horizontal Centering */
+  justify-content: center;
+  
+  /* Vertical Centering */
+  align-items: center;     
+}
+.box {
+  height: 3em; 
+  width: 17em;
+  background: #2e6371;
+  color: #fff;
+}
+/*Styling the menu anchors for on hover effect*/
+a .center:hover{
+  background-color: #6666FF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 6px 0 rgba(0, 0, 255, 0.19);
+  border-bottom: 2px solid black;
+}
+
+/*Styling the Navigation */
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  line-height: 40px;
+  text-align: left;
+    width: 130px;
+    border-bottom: none;
+    height: 50px;
+    display: inline-block;
+    margin-right: -4px;
+  }
+  .nav > ul > li {
+    text-align: center;
+  }
+
+  .nav > ul > li > a {
+    padding-left: 0;
+  }
+
+  /* Sub Menus */
+  .nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+
+  .nav li:hover ul {
+    display: block;
+  }
+
+  .nav li ul li {
+    display: block;
+  }
+  
+  /* Sub menu indicators */
+  .sub > a::after {
+    content: '\0025B8';
+    margin-left: 3px;
+  }
+  .sub > a:hover::after {
+    content: '\0025BE';
+  }
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 0.3em;
+  border-bottom: none;
+  transition: .3s background-color;
+}
+
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+.nav a.active {
+  background-color: #aaa;
+  color: #444;
+  cursor: default;
+}
+
+/* Sub Menus */
+.nav li li {
+  font-size: 0.8em;
+}
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right, .nav li {
+    width: 100%;
+  }
+  .menu a .card, .menu a .center{
+    width: 96%;
+    margin: 0 2% 0 2%;
+  }
+  .nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  line-height: 40px;
+  text-align: left;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding-left: 15px;
+  border-bottom: 1px solid #888;
+  transition: .3s background-color;
+}
+
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+.nav a.active {
+  background-color: #aaa;
+  color: #444;
+  cursor: default;
+}
+
+/* Sub Menus */
+.nav li li {
+  font-size: 0.8em;
+}
+
+.menu, .container-side{
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+}
