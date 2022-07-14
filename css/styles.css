@@ -1,3 +1,8 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: 'Montserrat', sans-serif; 
   height: 90vh;
@@ -7,12 +12,14 @@ h2 {
   color: white; 
   font-size: 1.2em;
 }
-.container{
+.container, .container-side{
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 50vh;
+  margin: 1em;
+  float: left;
 }
 .center {
   display: flex;
@@ -31,6 +38,73 @@ h2 {
   background: #2e6371;
 }
 
+.container-side{
+  flex-direction: row;
+  align-items: flex-start;
+  width: 69%;
+}
+
+.container-row{
+  text-align: center;
+  margin: 2em 0 0 0;
+}
+
+.container a{
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+a .center:hover{
+  background-color: #6666FF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 6px 0 rgba(0, 0, 255, 0.19);
+  border-bottom: 2px solid black;
+}
+
+div.card {
+  width: 250px;
+  height: 13em;
+  margin: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.header {
+  background-color: #333366;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+div.content {
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+/*Styling the button*/
+.btn{
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.7em 1em;
+  margin: 0.4em 0;
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer; width: 100%;
+  padding: 0.2em 0.4em;
+  margin: 0.5em 0 0.5em 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  font-size: 0.8em;
+}
+a{
+  text-decoration: none;
+}
+
+
 
 .nav ul {
   list-style: none;
@@ -42,7 +116,7 @@ h2 {
 
 .nav li {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.1em;
+  font-size: 1em;
   line-height: 40px;
   text-align: left;
 }
@@ -68,7 +142,7 @@ h2 {
 
 /* Sub Menus */
 .nav li li {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 /*******************************************
