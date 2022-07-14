@@ -214,6 +214,16 @@ div.main .card{
   font-size: 0.8em;
 }
 
+.myfoot{
+  background-color: #444;
+  text-align:center;
+  padding:10px;
+  margin-top:7px;
+}
+
+.container{
+  text-align: center;
+}
 
 
 @media only screen and (max-width: 620px) {
@@ -265,7 +275,7 @@ div.main .card{
   font-size: 0.8em;
 }
 
-.menu, .container-side{
+.menu{
     justify-content: space-around;
     align-items: stretch;
   }
