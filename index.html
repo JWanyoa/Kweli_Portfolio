@@ -7,31 +7,38 @@
 </head>
 <body style="font-family:Verdana;color:#aaaaaa;">
   <header>
-      <div class="nav">
-        <ul>
-          <li class="home"><a href="#">Home</a></li>
-          <li class="about"><a href="aboutme.html">About Me</a></li>
-          <li class="tutorials sub"><a href="#">Projects</a>
-            <ul>
-              <li><a href="#">Project #1</a></li>
-              <li><a href="#">Project #2</a></li>
-              <li><a href="#">Project #3</a></li>
-            </ul>
-          </li>
-          <li class="news sub"><a href="#">Blogs</a>
-            <ul>
-              <li><a href="#">Blog #1</a></li>
-              <li><a href="#">Blog #2</a></li>
-              <li><a href="#">Blog #3</a></li>
-            </ul>
-          </li>
-          <li class="contact"><a href="contact.html">Contact Me</a></li>
-        </ul>
-      </div>
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo">JoWK</div>
+       <!-- NAVIGATION MENU -->
+       <ul class="nav-links">
+         <!-- USING CHECKBOX HACK -->
+         <input type="checkbox" id="checkbox_toggle" />
+         <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+         <!-- NAVIGATION MENUS -->
+         <div class="menu">
+           <li><a href="/">Home</a></li>
+           <li><a href="/">About</a></li>
+           <li class="services">
+             <a href="/">Services</a>
+             <!-- DROPDOWN MENU -->
+             <ul class="dropdown">
+               <li><a href="/">Web Design</a></li>
+               <li><a href="/">Graphic Design</a></li>
+               <li><a href="/">Database Design</a></li>
+               <li><a href="/">Network Connections</a></li>
+               <li><a href="/">ICT Training</a></li>
+             </ul>
+           </li>
+           <li><a href="/">Pricing</a></li>
+           <li><a href="/">Contact</a></li>
+         </div>
+       </ul>
+     </nav>
     </header>
 
 <div style="overflow:auto">
-  <div class="menu">
+  <div class="menu1">
     <a href="">
       <div class="card avatar">
         <div class="header">
