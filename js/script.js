@@ -7,4 +7,9 @@ $(document).ready(function(){
 			$('.navbar').removeClass("sticky");
 		}
 	})
+
+	//Navbar toggle menu script
+	$('.menu-btn').click(function(){
+		$('.navbar .menu').toggleClass('active');
+	})
 });
