@@ -134,11 +134,11 @@
 section{
 	padding: 100px 0;
 }
-.about{
+.about,.services{
 	font-family: 'Poppins', sans-serif;
 }
 
-.about .title{
+.about .title, .services .title{
 	position: relative;
 	text-align: center;
 	font-size: 40px;
@@ -148,7 +148,7 @@ section{
 	padding-bottom: 20px;
 }
 
-.about .title::before{
+.about .title::before, .services .title::before{
 	content: "";
 	position: absolute;
 	width: 190px;
@@ -159,7 +159,7 @@ section{
 	transition: translateX(-50%);
 }
 
-.about .title::after{
+.about .title::after, .services .title::after{
 	content: "Who I am";
 	position: absolute;
 	padding: 5px;
@@ -171,8 +171,9 @@ section{
 	transition: translateX(-50%);
 }
 
+
 /*Styling About conent area*/
-.about .about-content{
+.about .about-content, .services .services-content{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -227,6 +228,60 @@ section{
 }
 
 
+/*Services section styling*/
+.services{
+	background: #111;
+	color: #fff;
+}
+
+.services .title::before{
+	background: #fff;
+	width: 250px;
+	left: 40%;
+}
+.services .title::after{
+	background: #111;
+	content: "What I do";
+}
+
+.services .services-content .card{
+	width: calc(33% - 20px);
+	background: #222;
+	text-align: center;
+	border-radius: 6px;
+	padding: 20px 25px;
+	cursor: pointer;
+	margin: 10px;
+	transition: all 0.3s ease;
+}
+
+.services .services-content .card .box{
+	transition: all 0.3s ease;
+}
+
+.services .services-content .card:hover .box{
+	transform: scale(1.05);
+}
+
+.services .services-content .card:hover{
+	background: crimson;
+}
+
+.services .services-content .card:hover i{
+	color: #fff;
+}
+
+.services .services-content .card i{
+	font-size: 50px;
+	color: crimson;
+	transition: color 0.3s ease;
+}
+
+.services .services-content .card .text{
+	font-size: 25px;
+	font-weight: 500px;
+	margin: 10px 0 7px 0;
+}
 
 /*Responsive media*/
 @media (max-width: 1300px){
@@ -315,8 +370,12 @@ section{
 	.about .about-content .right{
 		flex: 100%;
 	}
-}
 
+	.services .services-content .card{
+		width: calc(50% - 20px);
+		margin-bottom: 20px;
+	}
+}
 @media (max-width: 690px){
 	.max-width{
 		padding: 0 23px;
@@ -332,5 +391,9 @@ section{
 
 	.home .home-content a{
 		font-size: 20px;
+	}
+
+	.services .services-content .card{
+		width: calc(100% - 20px);
 	}
 }
