@@ -142,6 +142,7 @@ a .center:hover{
 .dropdown li:hover {
  background-color: #4c9e9e;
  border-left: 5px solid #99d1d1;
+ transition: 0.4s ease;
 }
 .services:hover .dropdown {
  display: block;
